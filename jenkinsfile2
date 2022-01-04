@@ -1,9 +1,14 @@
 pipeline {
     agent any
+    environment {
+     firstname = "fahad"
+     lastname = "meraj"
+    }
     stages{
         stage("echo a line"){
             steps{
                 echo 'this is step one'
+                bat 'echo "%firstname%"'
             }
         }
         stage("execute a command") {
