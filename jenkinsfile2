@@ -23,6 +23,7 @@ pipeline {
                 echo "========executing D========"
             } 
         }
+    }
     post{
         always{
             echo "========always========"
