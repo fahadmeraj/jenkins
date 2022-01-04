@@ -1,20 +1,23 @@
-pipeline{
+pipeline {
     agent any
     stages{
         stage("echo a line"){
             steps{
                 echo 'this is step one'
             }
-        stage("execute a command"){
+        }
+        stage("execute a command") {
             steps{
                 bat 'dir'
             }
+        }
         stage("run multiple commands"){
             steps{
                 bat '''dir
                 ping -n 4 8.8.8.8
                 '''
             }
+        }
         stage("D"){
             steps{
                 echo "========executing D========"
